@@ -1,10 +1,10 @@
+
 html{
 	font-size: 62.5%;
 	box-sizing: border-box;
 }
 
 body{
-
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
@@ -18,9 +18,11 @@ body{
 	margin-top: 2rem;
 	margin-bottom: 2rem;
 }
+.burger-menu-icons-container{
+	display: none;
+}
 .top-header{
 	display: flex;
-
 	flex-wrap: wrap;
 	font-size: 1.5rem;
 	justify-content:space-around;
@@ -67,19 +69,15 @@ body{
 .header-link{
 	font-family: 'Josefin Sans', sans-serif;
 	color: #525050;
+	padding-right: 1.5rem; 
 	text-align: center;
 }
 
-.header-link:link{
-	padding-right: 1.5rem; 
-	color: grey;
-}
+
 .hidden{
 	display: block;
 	font-weight: 100;
-	text-align: center;
-	
-
+	text-align: center;	
 }
 
 .header-link:hover{
@@ -120,51 +118,70 @@ body{
 
 
 	/* small screen navbar */
-		@media only screen and (max-device-width: 800px){
+		@media only screen and (max-width: 800px){
 			.hidden{
 				display: none;
 			}
 		}
 
 
-		@media only screen and (max-device-width: 500px){
+		@media only screen and (max-width: 500px){
 
 			.header{
 				margin-top: 0;
-				background-color: grey;
+				position: relative;
+				font-size: 1.6rem;
+				color: #525050;
+				
 			}
-
-			.top-header-nav-wrapper{
+			.desktop-search, .desktop-header-links, .desktop-header-account{
 				display: none;
 			}
+			
+
 			.burger-menu-icons-container{
-				height: 10rem;
-				
-				margin-left: .3rem;		
-				box-sizing:border-box;
-				cursor: pointer;
-				
+				display: flex;
+				justify-content: space-around;	
+				align-items:center;
+				border-bottom: 0.1rem solid grey;
 			}		
-			.nav-line-1{
-				margin-top: .6rem;
+			.mobile-input-toggle{
+				display: none;
+			}
+			.mobile-nav-links{
+				display: flex;
 			}
 			.nav-lines{
 				height: .2rem;
 				width: 3.5rem;
 				background-color: #222;
 				margin-bottom:.6rem;
+				margin-right: .5rem;
 			}
 
 			.nav-line-1, .nav-line-3{
-				width: 2.9rem;
-				transition: all .6s;
+				transition: all .3s;
 			}
 
-			.burger-menu-icon:hover .nav-lines {
-				width: 3.5rem;
-				
+			.top-header-nav-wrapper{
+				position: absolute;
+				width: 100%;
+				top: 5.4rem;
+				left: -50rem;
+				text-align: center;
+				background-color: white;
+				transition: all .6s ;
 			}
-			
+
+			.navbar-menu{
+				display: block;
+				margin: 5rem auto;
+				text-align: center;
+				width: 100%;
+				transition: all .3s ease;
+				padding: 0;
+			}
+
 			.hidden-nav-checkbox:checked ~ .header .nav-line-1{
 				transform: rotate(-405deg) translate(-5px, 6px) ;
 			}
@@ -179,12 +196,82 @@ body{
 
 			.hidden-nav-checkbox:checked ~ .header .top-header-nav-wrapper{
 				display: flex;
+				left: 0;
+				text-align: center;
 				flex-direction: column;
-				flex-flow: column-reverse;
+				flex-flow: column-reverse;	
 			}
 
-			.
+			.nav-item{
+				border-bottom: .1rem solid  rgba(254,242,208, .5);
+			}
 
+			.navbar-menu .nav-item{
+				margin-bottom: 5rem;
+			}
+
+			.desktop-logo{
+				display: none;
+			}
+
+			.mobile-search{
+				display: flex;
+				justify-content: space-around;
+				align-items:center;
+				margin:.69rem 3rem .69rem -3rem;
+				flex-grow: 1;
+				transition: all .4s;
+
+			}
+			
+			.header-search-btn{
+				opacity: 0;
+				transition: all .8s;
+			}
+			.mobile-header-search-form{
+				position: relative;
+				width: 0;
+				height: 0;
+				overflow: hidden;
+				transition: all .2s;
+			}
+			
+			.label::before{
+				content: "\f002";
+				font-family: FontAwesome;
+				transition: all .3s;
+			}
+
+			.mobile-input-toggle:checked ~ .mobile-view-nav, .mobile-input-toggle:checked ~ .header-logo, .mobile-input-toggle:checked ~ .mobile-nav-links{
+				display: none;
+			}
+			
+			.mobile-input-toggle:checked ~ .header-search .label::before{
+				opacity: 0;
+				font-size: 0rem;
+				
+				
+			}
+
+			.mobile-input-toggle:checked ~ .header-search .label::after{
+				opacity: 1;
+				content: "X";
+				font-weight: 700;
+			}
+			
+			
+			.mobile-input-toggle:checked ~ .header-search .mobile-header-search-form{
+				
+				height: auto;
+				width: 80%;
+				overflow: none;
+				margin: 0 auto;
+			}
+			.mobile-input-toggle:checked ~ .header-search .mobile-header-search-form .mobile-header-search-btn{
+				opacity: 1;
+			}
+
+			
 		}
 
 	/* end of small screen navbar */

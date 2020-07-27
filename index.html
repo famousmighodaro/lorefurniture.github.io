@@ -11,6 +11,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<title>Welcome | Lore Furniture
 	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<div class="container">
@@ -20,21 +21,44 @@
 
 
 	<header class="header">
-		<label for="nav-checkbox" class="mobile-view-nav">
-			<div class="burger-menu-icons-container">
+		<div class="burger-menu-icons-container">
+
+			<input type="checkbox" id="mobile-seach-input-toggle" class="mobile-input-toggle" >
+
+			<div class="header-logo">
+				<img src="img/logo.png" alt="" class="logo mobile-logo">
+			</div>
+			<div class="mobile-nav-links">
+				<a href="" class="header-link header-login"><i class="fas fa-user"></i></a>
+				<a href="" class="header-link header-wish-list"><i class="fas fa-heart"></i></a>
+				<a href="" class="header-link header-cart"><i class="fas fa-shopping-cart"></i></a>
+			</div>
+			
+
+			<div class="header-search mobile-search">
+				<form action="" class="mobile-header-search-form header-search-form">
+					<input type="text" class="mobile-header-search-input header-search-input" placeholder="Search for more furniture acticles" >
+					<button class="mobile-header-search-btn header-search-btn">
+							<i class="fas fa-search"></i>
+					</button>
+				</form>
+				<label for="mobile-seach-input-toggle" class="label"></label>
+			</div>
+			<label for="nav-checkbox" class="mobile-view-nav">
 				<div class="nav-lines nav-line-1"></div>
 				<div class="nav-lines nav-line-2"></div>
 				<div class="nav-lines nav-line-3"></div>
-				
-			</div>
-		</label>
+			</label>	
+		</div>
+
+		
 		<div class="top-header-nav-wrapper">
 			<div class="top-header">
-
+	
 				<div class="header-logo">
-					<img src="img/logo.png" alt="" class="logo">
+					<img src="img/logo.png" alt="" class="logo desktop-logo">
 				</div>
-				<div class="header-search">
+				<div class="header-search desktop-search">
 					<form action="" class="header-search-form">
 						<input type="text" class="header-search-input" placeholder="Search for more furniture acticles">
 						<button class="header-search-btn">
@@ -42,12 +66,12 @@
 						</button>
 					</form>
 				</div>
-				<div class="header-links">
+				<div class="header-links desktop-header-links">
 					<a href="" class="header-link header-showroom"><i class="fas fa-map-marker-alt"><span class="hidden">Showroom</span></i></a>
 					<a href="" class="header-link header-customer"><i class="fas fa-shipping-fast"><span class="hidden">Customer</span></i></a>
 
 				</div>
-				<div class="header-account">
+				<div class="header-account desktop-header-account">
 					<a href="" class="header-link header-login"><i class="fas fa-user"><span class="hidden">Login</span></i></a>
 					<a href="" class="header-link header-wish-list"><i class="fas fa-heart"><span class="hidden">Wish List</span></i></a>
 					<a href="" class="header-link header-cart"><i class="fas fa-shopping-cart"><span class="hidden">Cart</span></i></a>
@@ -59,8 +83,7 @@
 			<nav class="main-nav">
 				<div class="navbar">
 					<ul class="navbar-menu">
-						<li class="nav-item table-items"> <a href="" class="nav-link">Table</a></li>
-						
+						<li class="nav-item"><a href="" class="nav-link">Table</a></li>
 						<li class="nav-item"><a href="" class="nav-link">Chairs & Stools</a></li>
 						<li class="nav-item"><a href="" class="nav-link">Cabinets</a></li>
 						<li class="nav-item"><a href="" class="nav-link">Lighting</a></li>
