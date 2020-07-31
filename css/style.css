@@ -117,7 +117,108 @@ body{
 
 
 
-	/* small screen navbar */
+	
+
+
+/* end of navbar */
+
+
+/* Hero header */
+.hero{
+	height: 80vh;
+	width: 100%;
+	background: linear-gradient(to top, rgba(0, 0, 0, .6), rgba(0, 0, 0, .7)), url(../img/hero-img.jpg) no-repeat center;
+	background-size: cover;
+	text-align: center;
+}
+.hero-banner{
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items:
+	color: #fff;
+}
+.hero-heading{
+	font-size: 2.1rem;
+	font-family: "Montserrat" sans-serif;
+	color: #fff;
+	letter-spacing: .2rem;
+
+}
+.hero-banner-content-heading{
+	display: flex;
+	align-items:center;
+	flex-wrap: wrap;
+	font-size: 2.6rem;
+	color: #e5e5e5;
+	justify-content: center;
+	text-align: center;
+
+}
+.banner-heading{
+	margin: 0;
+	position: relative;
+	font-size: 15rem;
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: lighter;
+	color: #fca311;
+	
+}
+.banner-heading p{
+	margin:0;
+}
+.banner-heading-percentage{
+	position: absolute;
+	font-size: 8rem;
+	margin-right: 2rem;
+	color: #fca311;
+	top: 2.5rem;
+	left: 53.59%;
+	
+}
+
+.banner-paragraph{
+	color: #fca311;
+	font-size: 1rem;
+	margin:0;
+}
+
+.banner-paragraph p:first-child{
+	font-size: 2.6rem;
+	letter-spacing: .4rem;
+	margin-left: -15rem;
+}
+
+.banner-paragraph p:last-child{
+	font-size: 1.6rem;
+	font-weight: bolder;
+	text-align: center;
+	color:#fdfcdc;
+	letter-spacing: .2rem;
+}
+
+.hero-button{
+	width:14rem;
+	color:#fca311;
+	height: 6rem;
+	padding:.2rem;
+	background: transparent;
+	border: .2rem solid #fca311;
+	outline: none;
+	transition: all .4s;
+}
+.hero-button:hover{
+	background-color: rgba(253,252,220, .2);
+}
+.hero-button:active{
+	transform: scale(0.9, .9);
+}
+/* end of hero header */
+
+/* samll screen */
+
 		@media only screen and (max-width: 800px){
 			.hidden{
 				display: none;
@@ -125,8 +226,8 @@ body{
 		}
 
 
-		@media only screen and (max-width: 500px){
-
+		@media only screen and (max-width: 700px){
+			/* small screen navbar */
 			.header{
 				margin-top: 0;
 				position: relative;
@@ -167,7 +268,7 @@ body{
 				position: absolute;
 				width: 100%;
 				top: 5.4rem;
-				left: -50rem;
+				left: -100rem;
 				text-align: center;
 				background-color: white;
 				transition: all .6s ;
@@ -271,10 +372,31 @@ body{
 				opacity: 1;
 			}
 
-			
+			/* end of small screen navbar */
+
+			/* hero header */
+			.hero-banner-content-heading{
+				display: block;
+				text-align: center;
+			}
+
+			.banner-paragraph p:first-child{
+				margin: 0;
+				margin-left: 0rem;
+			}
+
+			.banner-paragraph p:last-child{
+				
+			}
+
+			.banner-heading-percentage{
+				left: 51%;
+				
+			}
+			/* end of hero header */
 		}
 
-	/* end of small screen navbar */
+	
 
-
-/* end of navbar */
+	/
+/*end of small screen */
