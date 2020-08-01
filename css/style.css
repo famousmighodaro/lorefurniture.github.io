@@ -183,6 +183,7 @@ body{
 	color: #fca311;
 	font-size: 1rem;
 	margin:0;
+	★★★
 }
 
 .banner-paragraph p:first-child{
@@ -272,6 +273,7 @@ body{
 				text-align: center;
 				background-color: white;
 				transition: all .6s ;
+				z-index: 20;
 			}
 
 			.navbar-menu{
@@ -336,7 +338,7 @@ body{
 				overflow: hidden;
 				transition: all .2s;
 			}
-			
+		
 			.label::before{
 				content: "\f002";
 				font-family: FontAwesome;
