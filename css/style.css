@@ -8,6 +8,7 @@ body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
+	color: #525050;
 }
 
 .container{
@@ -217,6 +218,45 @@ body{
 	transform: scale(0.9, .9);
 }
 /* end of hero header */
+
+/* content container */
+.content-container{
+	width: 80%;
+	margin:0 auto;
+}
+
+/* Why us */
+.why-us{
+	text-align: center;
+	border-bottom: .1rem solid rgba(82,80,80, 0.2);
+}
+
+.why-us ul{
+	display: flex;
+	justify-content: space-around;
+	font-size: 1.5rem;
+	list-style:none;
+	flex-wrap: wrap;
+	text-align: center;
+	align-items:space-around;
+	
+	padding:0;
+
+	
+}
+.why-us li{
+	align-self: flex-start;
+	line-height: 3rem;
+}
+.why-us a{
+	text-decoration: none;
+	color: #525050;
+}
+.why-us a:hover{
+	color: #CAC7BE;
+}
+/* end of why us */
+/* end of content conatainer */
 
 /* samll screen */
 
