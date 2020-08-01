@@ -231,6 +231,7 @@ body{
 			/* small screen navbar */
 			.header{
 				margin-top: 0;
+				margin-bottom: 0;
 				position: relative;
 				font-size: 1.6rem;
 				color: #525050;
@@ -377,18 +378,31 @@ body{
 			/* end of small screen navbar */
 
 			/* hero header */
+			
+			.hero-heading{
+				margin-bottom: 0;
+				font-size: 1.3rem;
+			}
 			.hero-banner-content-heading{
 				display: block;
 				text-align: center;
 			}
-
+			
+			.banner-heading{
+				font-size: 10rem;
+			}
+			.banner-heading p:last-child{
+				font-size: 5rem;
+				top:1.67rem;
+			}
 			.banner-paragraph p:first-child{
 				margin: 0;
+				font-size: 1.2rem;
 				margin-left: 0rem;
 			}
 
 			.banner-paragraph p:last-child{
-				
+				font-size: 1.2rem;
 			}
 
 			.banner-heading-percentage{
